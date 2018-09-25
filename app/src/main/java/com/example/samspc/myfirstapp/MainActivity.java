@@ -329,12 +329,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        TextView hungerText = (TextView)findViewById(R.id.text_hunger);
-//        hungerText.setText("Hunger: " + hunger);
-//        TextView happyText = (TextView)findViewById(R.id.text_happy);
-//        happyText.setText("Happiness: " + happy);
-//        TextView healthText = (TextView)findViewById(R.id.text_health);
-//        healthText.setText("Health: " + health);
+
         TextView weightText = (TextView)findViewById(R.id.text_weight);
         weightText.setText("Weight: " + weight +"kgs");
     }
