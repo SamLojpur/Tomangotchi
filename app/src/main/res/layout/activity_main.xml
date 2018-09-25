@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/food_icon"
+            android:id="@+id/food_icon"
+            android:layout_weight="0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bar1percent"
+            android:id="@+id/hunger_bar"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/controller_icon"
+            android:id="@+id/controller_icon"
+            android:layout_weight="0" />
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bar1percent"
+            android:id="@+id/happiness_bar"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/heart_icon"
+            android:id="@+id/heart_icon"
+            android:layout_weight="0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bar1percent"
+            android:id="@+id/health_bar"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/weight_icon"
+            android:id="@+id/weight_icon"
+            android:layout_weight="0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bar1percent"
+            android:id="@+id/weight_bar"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_weight"
+            android:layout_weight="0" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:id="@+id/options_food"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:visibility="gone"
+            android:layout_alignBottom="@+id/connor_sprite"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:text="Meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_meal"
+                android:layout_weight="1"
+                android:onClick="eatMeal" />
+            <Button
+                android:text="Snack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_snack"
+                android:layout_weight="1"
+                android:onClick="eatSnack" />
+            <Button
+                android:text="Fruit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_fruit"
+                android:layout_weight="1"
+                android:onClick="eatFruit" />
+            <!-- todo  add events for snack and fruit-->
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/options_health"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:visibility="gone"
+            android:layout_alignBottom="@+id/connor_sprite"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:text="Medicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_medicine"
+                android:layout_weight="1"
+                android:onClick="takeMedicine" />
+            <Button
+                android:text="Vitamin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_vitamin"
+                android:layout_weight="1"
+                android:onClick="takeVitamin" />
+        </LinearLayout>
+        <LinearLayout
+        android:id="@+id/options_bath"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/connor_sprite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:text="Toilet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_toilet"
+            android:layout_weight="1"
+            android:onClick="flush" />
+        <Button
+            android:text="Shower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_shower"
+            android:layout_weight="1"
+            android:onClick="nothing" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/options_games"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:visibility="gone"
+            android:layout_alignBottom="@+id/connor_sprite"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:text="Sport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_sport"
+                android:layout_weight="1"
+                android:onClick="gamePlaceholder" />
+            <Button
+                android:text="Game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_game"
+                android:layout_weight="1"
+                android:onClick="gamePlaceholder" />
+        </LinearLayout>
+
+
+        <Button
+            android:text="doEvents"
+            android:onClick="doEventsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/options_food"
+            android:layout_toRightOf="@+id/connor_sprite"
+            android:layout_toEndOf="@+id/connor_sprite"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="44dp"
+            android:id="@+id/doEvents" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/connor_sprite"
+            app:srcCompat="@drawable/animate_connor_neutral"
+            android:adjustViewBounds="false"
+            android:layout_marginRight="54dp"
+            android:layout_marginEnd="54dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="101dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_feeding"
+            android:text="Feed"
+            android:layout_width="0dp"
+            android:layout_weight="0.46"
+            android:layout_height="wrap_content"
+            android:onClick="showFoodOptions" />
+        <Button
+            android:id="@+id/button_bathroom"
+            android:text="Bath"
+            android:onClick="showBathOptions"
+            android:layout_width="0dp"
+            android:layout_weight="0.42"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/button_health"
+            android:text="Health"
+            android:onClick="showHealthOptions"
+            android:layout_width="0dp"
+            android:layout_weight="0.61"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/button_games"
+            android:text="Games"
+            android:onClick="showGamesOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/button_Settings"
+            android:text="menu"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:onClick="resetGame"
+            android:layout_weight="0.03" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
